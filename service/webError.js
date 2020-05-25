@@ -1,4 +1,4 @@
-const path = require('path')
+//const path = require('path')
 const db = require('../db/db')
 const dataSql = require('../db/dataSql') //sql
 
@@ -11,7 +11,7 @@ exports.showList = (req, res) => {
 
 //add
 exports.addError = (req, res) => {
-    db.base(dataSql.webError.queryAll, null, (result) => {
+    db.base(dataSql.webError.insert, null, (result) => {
         res.json({ code: 200, message: 'success', data: result })
     })
 }
