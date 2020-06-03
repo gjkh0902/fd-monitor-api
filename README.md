@@ -6,8 +6,10 @@ nodejs数据埋点收集
 ```bash
 #npm
 npm install
+
 #cnpm
 cnpm install
+
 #yarn
 yarn install
 ```
