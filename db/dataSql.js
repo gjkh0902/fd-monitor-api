@@ -4,8 +4,8 @@
 
 //web_error
 const webError = {
-    insert: 'INSERT INTO web_error(id, msg, useragent,category,createTime,pageUrl,resourceUrl,type,status,col,line,querydata,method) VALUES(?,?,?)',
-    update: 'UPDATE web_error SET systemId=?, useragent=? WHERE id=?',
+    insert: 'INSERT INTO web_error set ?',
+    update: 'UPDATE web_error SET ? WHERE id=?',
     delete: 'DELETE FROM web_error WHERE id=?',
     queryById: 'SELECT * FROM web_error WHERE id=?',
     queryAll: 'SELECT * FROM web_error',

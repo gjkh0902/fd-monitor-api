@@ -8,8 +8,9 @@ router.get('/', (req, res) => {
     res.render('index', { title: 'Express' })
 })
 
-//webErrorList
-router.get('/webErrorList', webError.showList)
+//webError
+router.get('/webError', webError.list)
+router.post('/addError', webError.add)
 
 //test
 router.get('/api/test', (req, res) => {
