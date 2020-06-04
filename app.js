@@ -2,8 +2,10 @@ const createError = require('http-errors')
 const express = require('express') //引入express模块
 const path = require('path')
 var bodyParser = require('body-parser')
-    //routes
-const routers = require('./routes/index')
+
+//routes
+const routers = require('./routes/index') //页面路由
+const api = require('./routes/api') //api
 
 const app = express() //创建express的实例
 
@@ -25,7 +27,8 @@ const cors = require('cors')
 app.use(cors())
 
 //配置路由
-app.use(routers)
+app.use(`/`, routers)
+app.use(`/api`, api)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -9,6 +9,7 @@ const webError = {
     delete: 'DELETE FROM web_error WHERE id=?',
     queryById: 'SELECT * FROM web_error WHERE id=?',
     queryAll: 'SELECT * FROM web_error',
+    query: 'SELECT * FROM web_error where id=?',
 }
 
 //web_pages

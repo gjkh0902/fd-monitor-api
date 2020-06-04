@@ -10,11 +10,5 @@ router.get('/', (req, res) => {
 
 //webError
 router.get('/webError', webError.list)
-router.post('/addError', webError.add)
-
-//test
-router.get('/api/test', (req, res) => {
-    res.json({ code: 200, message: 'success', data: { text: 1 } })
-})
 
 module.exports = router
