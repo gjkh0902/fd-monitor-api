@@ -4,7 +4,7 @@
 const resFormat = (code, msg, result) => {
     return {
         code: code || '0000',
-        message: msg || '',
+        msg: msg || '',
         data: result || '',
     }
 }
