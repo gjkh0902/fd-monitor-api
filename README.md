@@ -1,5 +1,5 @@
 # fd-monitor-api
-nodejs数据埋点api
+nodejs+mysql数据埋点api
 
 # install
 
