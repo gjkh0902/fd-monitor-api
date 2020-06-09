@@ -21,13 +21,9 @@ const crudJson = (type, result) => {
             break
         case 'select': //查询数据
             if (!!result.length) {
-                if (result.length > 0) {
-                    return resFormat(200, '查询成功', result)
-                } else {
-                    return resFormat(200, '没有查到相关数据！', '')
-                }
+                return resFormat(200, '查询成功', result)
             } else {
-                return resFormat(500, '查询失败', '')
+                return resFormat(200, '没有查到相关数据！', result)
             }
             break
         case 'del': //删除数据

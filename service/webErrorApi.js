@@ -11,7 +11,6 @@ exports.list = (req, res) => {
     //参数
     const param = {}
     db.base(dataSql.webError.queryAll, param, (result) => {
-        console.log(result)
         res.json(crudJson('select', result))
     })
 }
