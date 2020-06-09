@@ -1,5 +1,5 @@
-# fd-monitor-system
-nodejs数据埋点收集
+# fd-monitor-api
+nodejs数据埋点api
 
 # install
 
