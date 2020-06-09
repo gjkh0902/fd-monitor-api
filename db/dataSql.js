@@ -9,7 +9,14 @@ const webError = {
     delete: 'DELETE FROM web_error WHERE id=?',
     queryById: 'SELECT * FROM web_error WHERE id=?',
     queryAll: 'SELECT * FROM web_error',
-    query: 'SELECT * FROM web_error where id=?',
+}
+
+//web_user
+const webUser = {
+    insert: 'INSERT INTO web_user set ?',
+    queryById: 'SELECT * FROM web_user WHERE id=?',
+    queryAll: 'SELECT * FROM web_user',
+    queryLogin: 'SELECT * FROM web_user where userName=? and passWord=?',
 }
 
 //web_pages
@@ -19,5 +26,6 @@ const webPages = {
 
 module.exports = {
     webError,
+    webUser,
     webPages,
 }
