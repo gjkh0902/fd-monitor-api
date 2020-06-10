@@ -12,6 +12,6 @@ api.get('/listError', webErrorApi.list)
 api.post('/addUser', webUserApi.add)
 api.post('/userLogin', webUserApi.login)
 api.get('/userInfo', webUserApi.info)
-api.get('/userLogout', webUserApi.logout)
+api.post('/userLogout', webUserApi.logout)
 
 module.exports = api

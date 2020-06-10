@@ -7,5 +7,6 @@ module.exports = {
     password: '12345678', // 密码
     port: '3306', //端口
     timezone: '08:00', //时区
+    multipleStatements: true,
     database: 'MkFontMonitor', // 数据库名称
 }
