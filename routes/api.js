@@ -4,6 +4,7 @@ const api = express.Router()
 const webErrorApi = require('../service/webErrorApi') // error
 const webUserApi = require('../service/webUserApi') // user
 const webPagesApi = require('../service/webPagesApi') // pages
+const webSystemApi = require('../service/webSystemApi') // system
 
 //webError
 api.post('/addError', webErrorApi.add)
@@ -17,5 +18,8 @@ api.post('/userLogout', webUserApi.logout)
 
 //webPages
 api.post('/addPages', webPagesApi.add)
+
+//webSyetem
+api.post('/addSystem', webSystemApi.add)
 
 module.exports = api
