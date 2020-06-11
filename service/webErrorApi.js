@@ -6,7 +6,6 @@ const { resFormat, SucCodeEnum, ErrCodeEnum } = require('../config/baseConfig') 
 
 //list
 exports.list = (req, res) => {
-    //console.log('req.query', req.query)
     const data = !!req.query ? req.query : {}
 
     if (!!data.page && !!data.limit) {
@@ -23,13 +22,14 @@ exports.list = (req, res) => {
             res.json(resFormat(200, SucCodeEnum.OPT_SUCCESS, result))
         })
     } else {
-        res.json(resFormat(500, ErrCodeEnum.PAGE_ERROR, result))
+        res.json(resFormat(500, ErrCodeEnum.PAGE_ERROR, ''))
     }
 }
 
 //add
 exports.add = (req, res) => {
     const data = req.body
+    console.log('req.query', data)
 
     //参数
     const param = {
@@ -44,7 +44,9 @@ exports.add = (req, res) => {
         extendsInfo: data.extendsInfo || '',
         col: data.logInfo.col || '',
         line: data.logInfo.line || '',
+        status: JSON.parse(data.logInfo.errorObj).status || '',
         errorObj: data.logInfo.errorObj || '',
+        systemId: data.systemId || 0,
         deviceInfo: data.deviceInfo || '',
     }
 

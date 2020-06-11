@@ -1,7 +1,7 @@
 const createError = require('http-errors')
 const express = require('express') //引入express模块
 const path = require('path')
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 
 //routes
 const routers = require('./routes/index') //页面路由
