@@ -7,7 +7,7 @@ const webError = {
     insert: 'INSERT INTO web_error set ?',
     update: 'UPDATE web_error SET ? WHERE id=?',
     delete: 'DELETE FROM web_error WHERE id=?',
-    queryOnPage: 'SELECT COUNT(*) AS count FROM web_error; SELECT * FROM web_error LIMIT ?,?',
+    queryOnPage: 'SELECT COUNT(*) AS count FROM web_error; SELECT * FROM web_error ORDER BY createTime desc LIMIT ?,?',
     queryAll: 'SELECT * FROM web_error',
 }
 
@@ -25,8 +25,15 @@ const webPages = {
     queryAll: 'SELECT * FROM web_pages',
 }
 
+//web_system
+const webSystem = {
+    insert: 'INSERT INTO web_system set ?',
+    queryOnPage: 'SELECT COUNT(*) AS count FROM web_system; SELECT * FROM web_system LIMIT ?,?',
+}
+
 module.exports = {
     webError,
     webUser,
     webPages,
+    webSystem,
 }

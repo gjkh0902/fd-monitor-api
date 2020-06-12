@@ -21,5 +21,6 @@ api.post('/addPages', webPagesApi.add)
 
 //webSyetem
 api.post('/addSystem', webSystemApi.add)
+api.get('/listSystem', webSystemApi.list)
 
 module.exports = api

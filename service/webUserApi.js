@@ -7,7 +7,10 @@ const { resFormat, SucCodeEnum, ErrCodeEnum } = require('../config/baseConfig') 
 //login
 exports.login = (req, res) => {
     let param = !!req.body ? req.body : {} // 参数
+
     param = Object.values(param).flat()
+
+    //console.log(param)
 
     db.base(dataSql.webUser.queryLogin, param, (result) => {
         if (!!result && !!result.length) {
