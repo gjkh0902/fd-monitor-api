@@ -11,7 +11,7 @@
  Target Server Version : 80018
  File Encoding         : 65001
 
- Date: 11/06/2020 19:50:15
+ Date: 15/06/2020 11:41:58
 */
 
 SET NAMES utf8mb4;
@@ -687,16 +687,17 @@ CREATE TABLE `web_system` (
   `slowCssTime` tinyint(2) NOT NULL DEFAULT '1' COMMENT '慢加载css资源阀值  单位：S',
   `slowImgTime` tinyint(2) NOT NULL DEFAULT '2' COMMENT '慢图片加载资源阀值  单位:S',
   `slowAajxTime` tinyint(2) NOT NULL DEFAULT '2' COMMENT 'AJAX加载阀值',
-  `appId` varchar(64) NOT NULL COMMENT '系统appId标识',
+  `appId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '系统appId标识',
   `userId` int(11) NOT NULL COMMENT '应用所属用户ID',
   PRIMARY KEY (`id`,`appId`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of web_system
 -- ----------------------------
 BEGIN;
 INSERT INTO `web_system` VALUES (16, 'http://seosiwei.com/', '我的博客', '2018-01-17 12:19:36', 5, 2, 2, 2, 2, 'BACC4A39EB104B8395F340F3973CA0D4', 2);
+INSERT INTO `web_system` VALUES (17, 'http://localhost:3000', '本地环境测试3000', '2020-06-12 12:36:16', 11, 1, 1, 1, 1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi5pys5Zyw546v5aKD5rWL6K-VMzAwMCIsImRvbWFpbiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlhdCI6MTU5MTkzNjU3Nn0.A4Cd7aTiEQZmOMeEceisOFOh094XiTLUk8880YIFgog', 3);
 COMMIT;
 
 -- ----------------------------

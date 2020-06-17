@@ -44,7 +44,7 @@ exports.add = (req, res) => {
         extendsInfo: data.extendsInfo || '',
         col: data.logInfo.col || '',
         line: data.logInfo.line || '',
-        status: JSON.parse(data.logInfo.errorObj).status || '',
+        status: data.logInfo.errorObj ? JSON.parse(data.logInfo.errorObj).status : '',
         errorObj: data.logInfo.errorObj || '',
         systemId: data.systemId || 0,
         deviceInfo: data.deviceInfo || '',
